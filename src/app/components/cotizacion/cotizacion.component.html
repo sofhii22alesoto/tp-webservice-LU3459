@@ -1,0 +1,110 @@
+<br>
+    <div class="row ">
+        <div class="card col-6">
+            <div class="card-header text-center conversortitulo">
+                <h5 class="card-title">Conversor de Divisas</h5>
+            </div>
+            <table class="exchange" cellpadding="3" >                    
+                <thead>                    
+                    <tr  class="bordes">
+                        <th scope="col"> </th>
+                        <th scope="col" > <img src="/assets/imagentp2/usd.png" class="" ><br>USD</th>
+                        <th scope="col" ><img src="/assets/imagentp2/eur.png" class=""><br>EUR</th>
+                        <th scope="col" ><img src="/assets/imagentp2/gbp.png" class=""><br>GBP</th>
+                        <th scope="col" ><img src="/assets/imagentp2/jpy.png" class=""><br>JPY</th>
+                        <th scope="col" ><img src="/assets/imagentp2/argentina.png" class=""><br>ARS</th>
+                    </tr>
+                </thead>
+                <tbody >
+                     <tr class="bordes">
+                        <th scope="row" ><img src="/assets/imagentp2/usd.png" class="">1 USD<br>Inverse </th>
+                            <td class="colnegro">1.000000 <br>1.000000</td>
+                                <td class="colazul">0.919901 <br>1.087074</td>
+                                <td class="colazul">0.811469 <br>1.232332</td>
+                                <td class="colazul">108.9079<br>0.009182</td>
+                                <td class="colazul">64.87725<br>0.015414</td>
+                    </tr>
+                    <tr class="bordes ">
+                                <th scope="row"><img src="/assets/imagentp2/eur.png" class="">1 EUR <br>Inverse</th>
+                                <td class="colazul">1.087074 <br>0.919901</td>
+                                <td class="colnegro">1.000000 <br>1.000000</td>
+                                <td class="colazul">0.882127<br>1.133623</td>
+                                <td class="colazul">118.3910<br>0.008447</td>
+                                <td class="colazul">70.52637<br>0.014179</td>
+                            </tr>
+                                  
+                            <tr class="bordes">
+                                  <th scope="row"><img src="/assets/imagentp2/gbp.png" class="">1 GBP <br>Inverse </th>
+                                  <td class="colazul">1.232332 <br>0.811469</td>
+                                  <td class="colazul">1.133623 <br>0.882127</td>
+                                  <td class="colnegro">1.000000<br>1.000000</td>
+                                  <td class="colazul">134.2108<br>0.007451</td>
+                                  <td class="colazul">79.95034<br>0.012508</td>
+                            </tr>
+                                  
+                            <tr class="bordes">
+                                <th scope="row"><img src="/assets/imagentp2/rub.png" class="">1 RUB <br>Inverse</th>
+                                <td class="colazul">0.013226 <br>75.61134 </td>
+                                <td class="colazul">0.012166 <br>82.19511</td>
+                                <td class="colazul">0.010732<br>93.17830</td>
+                                <td class="colazul">1.440365<br>0.694268</td>
+                                <td class="colazul">0.858036<br>1.165452</td>
+                             </tr>
+                        </tbody>
+                      </table>
+                   
+                    </div>
+    <div class="card col-5">
+        <div class= "card-header text-center conversortituloseg ">
+            Conversor De Divisas
+        </div>
+            <div class="card-body converform">
+                <form>
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Valor</label>
+                        <div class="col-sm-7">
+                            <input type="number" class="form-control" step="0.01" name="txtMonto" [(ngModel)]="q">
+                        </div>
+                    </div>
+                    <div class="">
+                        <fieldset class="form-group">
+                        <div class="row">
+                            <legend class="col-form-label col-sm-3 pt-0">Dinero</legend>
+                                <div class="col-sm-10">
+                                    <div class="form-check" >
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="1" [(ngModel)]="tipoMoneda" checked>
+                                        <label class="form-check-label" for="gridRadios1">
+                                           Dolares USD a ARS
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="2" [(ngModel)]="tipoMoneda" >
+                                        <label class="form-check-label" for="gridRadios1">
+                                           Peso ARS a USD
+                                         </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="3" [(ngModel)]="tipoMoneda" >
+                                        <label class="form-check-label" for="gridRadios1">
+                                           SGD a MYR
+                                         </label>
+                                    </div>
+                                    
+                                </div>
+                        </div>
+                        </fieldset>
+                        <div class="form-group row">
+                            <div class="col-sm-10" offset="2">
+                                <button type="button" style="margin: 10px" class="btn btn-warning" (click)="cambiarMoneda()">Aceptar</button>
+                                <button type="button" style="margin: 10px" class="btn btn-warning" (click)="limpiar()">Nuevo</button>
+                                <button type="submit" style="margin: 10px" class="btn btn-warning" [routerLink]="['./../home']">Salir</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-8 col-form-label" step="0.01"> el resultado es: {{total}} </label>
+                     </div>
+                </form>
+            </div>
+    </div>
+           

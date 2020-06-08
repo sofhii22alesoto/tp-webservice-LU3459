@@ -1,0 +1,33 @@
+<form>
+<br>
+    <div class="form-group row">
+        <label for="categoria" class="col-2">Categoria</label>
+            <select name="categoria" id="categoria" class="form-control col-3" [(ngModel)]="categoria">
+                <option value="soccer">soccer</option>
+                <option value="cricket">cricket</option>
+                <option value="basketball">basketball</option>
+            </select>
+    </div>
+    <div>
+      <button type="button" class="btn btn-primary" (click)="cargarNoticias()">Cargar Noticias</button>
+    </div>
+</form>
+<div class="row row-cols-1 row-cols-md-2">
+        <h1 class="text-lg-center">Últimas Noticias</h1>
+        <div class="col mb-4 col-md-6"  *ngFor="let item of vector_noticia">
+            <div class="col-12">
+                <div class="card ">
+                    <img src="{{item.img}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        
+                            <h4 class="card-title">{{item.tit}}</h4>
+                        
+                            <p class="card-text">{{item.con}}</p>
+                        
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+</div>        

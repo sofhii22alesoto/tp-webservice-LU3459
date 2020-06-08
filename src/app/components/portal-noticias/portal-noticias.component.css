@@ -1,0 +1,29 @@
+.card{
+    width: 450px;
+    
+}
+
+.card-title{
+    color: seashell;
+    background-color: red;
+    padding-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 0px;
+    border-radius: 5px;
+}
+
+.card-text{
+    font-weight: bolder;
+    font-size: 1.1rem;
+
+}
+
+.card-img-top{
+    margin-top: 5px;
+}
+
+.row div{
+    padding-left: 10px;
+    padding-right: 10px;
+
+}

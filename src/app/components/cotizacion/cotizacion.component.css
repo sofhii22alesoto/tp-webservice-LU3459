@@ -1,0 +1,30 @@
+.bordes{
+    border-bottom: solid 1px;
+    border-color: rgb(2, 152, 179);
+}
+.conversortitulo{
+    background: rgb(59, 135, 235);
+    color: white;
+}   
+.colnegro{
+    color: rgb(6, 6, 8);
+    font-weight: 700;
+}
+
+.colazul{
+    color: rgb(50, 124, 235);
+    font-weight: 600;
+    border-color: oldlace;
+}
+
+.conversortituloseg{
+    font: 22px Century Gothic ;
+    background: linear-gradient(to bottom, #003366 -3%, #006699 100%);
+    color: white;
+
+}
+.converform{
+    font: 14px Century Gothic ;
+    color: white;
+    background: linear-gradient(to bottom, #003366 -3%, #006699 100%);
+}
